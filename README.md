@@ -8,7 +8,9 @@ From the home page, Click "Get Started" to view the Notes page. On the Notes pag
 
 ## Deployment
 
-...
+Since Heroku will no longer be providing free hosting, the class is using Railway for hosting.
+
+### Deployed on Railway: [Link](https://note-taker-production-657c.up.railway.app/)
 
 ## Usage
 
