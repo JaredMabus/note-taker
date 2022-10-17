@@ -4,8 +4,8 @@ let data = require('./db/db.json');
 const uuid = require('uuid');
 const db = require('./lib/db');
 
-// Set port variable
-const PORT = 3001;
+const PORT = process.env.PORT || 3001;
+// const PORT = 3001;
 
 // Initialize express 
 const app = express();
