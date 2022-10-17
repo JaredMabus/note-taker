@@ -35,7 +35,7 @@ app.get('/api/notes', (req, res) => {
 });
 
 // Create POST API route for notes data
-app.post('/api/notes', (req, res) => {
+app.post('/api/notes', async (req, res) => {
     let note = req.body;
 
     // If note object is not empty, add note to db
@@ -44,18 +44,18 @@ app.post('/api/notes', (req, res) => {
         note.id = uuid.v4();
 
         // Add note to top of data global var
-        data.unshift(note);
+        data.push(note);
 
         // Update db.json
-        let success = db.updateDb(data);
+        const success = await db.updateDb(data);
 
         // Update global data variable
         success ? data = data : ""
 
         // Return msg and status
-        success
-            ? res.status(400).json({ msg: "Sorry, error occurred." })
-            : res.status(200).json({ msg: "Success!" });
+        success === true
+            ? res.status(200).json({ msg: "Success!" })
+            : res.status(400).json({ msg: "Sorry, error occurred." });
 
     } else {
         res.sendStatus(400);
@@ -63,7 +63,7 @@ app.post('/api/notes', (req, res) => {
 });
 
 // Create DELETE API route for notes data
-app.delete('/api/notes/:id', (req, res) => {
+app.delete('/api/notes/:id', async (req, res) => {
     // Get id from url params
     let id = req.params.id
 
@@ -73,15 +73,15 @@ app.delete('/api/notes/:id', (req, res) => {
     });
 
     // Update db.json
-    let success = db.updateDb(filteredData);
+    const success = await db.updateDb(filteredData);
 
     // Update global data variable
     data = filteredData
 
     // Return msg and status
     success
-        ? res.status(400).json({ msg: "Sorry, error occurred." })
-        : res.status(200).json({ msg: "Success!" });
+        ? res.status(200).json({ msg: "Success!" })
+        : res.status(400).json({ msg: "Sorry, error occurred." });
 });
 
 // Set listening port
