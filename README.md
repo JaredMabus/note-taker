@@ -2,9 +2,9 @@
 
 ## Description
 
-This is a note taking app that leverages a node express backend. It allows the user to create, save, and delete their notes.
+This is a note taking app that uses a node express backend. It allows the user to create, save, and delete their notes.
 
-From the home page, Click "Get Started" to view the Notes page. On the Notes page, use the right panel to write and title your notes. Select the "Save" icon at the top after finishing entering your note. Your saved not will show up on in the left panel. From this panel you can delete any notes you no longer need.
+From the home page, click "Get Started" to view the Notes page. On the Notes page, use the right panel to write and title your notes. Select the "Save" icon at the top after finishing entering your note. Your saved note will show up in the left panel. From this panel you can delete any notes you no longer need.
 
 ## Deployment
 
@@ -12,7 +12,7 @@ Since Heroku will no longer be providing free hosting, the class is using Railwa
 
 ### Deployed on Railway: [Link](https://note-taker-production-657c.up.railway.app/)
 
-## Usage
+## Set-Up
 
 ### Start the app
 
