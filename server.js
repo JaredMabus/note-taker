@@ -43,7 +43,7 @@ app.post('/api/notes', (req, res) => {
         // Add id to note
         note.id = uuid.v4();
 
-        // Add note to top of db.json
+        // Add note to top of data global var
         data.unshift(note);
 
         // Update db.json
@@ -67,7 +67,7 @@ app.delete('/api/notes/:id', (req, res) => {
     // Get id from url params
     let id = req.params.id
 
-    // Remove note from db.json
+    // Remove note from data global var
     let filteredData = data.filter(note => {
         return note.id !== id;
     });
