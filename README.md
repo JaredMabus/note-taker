@@ -8,19 +8,30 @@ From the home page, click "Get Started" to view the Notes page. On the Notes pag
 
 ## Deployment
 
-Since Heroku will no longer be providing free hosting, the class is using Railway for hosting.
+Deployed on Railway: [Link](https://note-taker-production-657c.up.railway.app/)
 
-### Deployed on Railway: [Link](https://note-taker-production-657c.up.railway.app/)
+(Since Heroku will no longer be providing free hosting, the class is using Railway for hosting)
 
-## Set-Up
+## Screenshots
 
-### Start the app
+![Screen shot of page](public/assets/images/screenshot2.png)
+![Screen shot of page](public/assets/images/screenshot.png)
+
+## Getting Started
+
+### Installation
+
+```sh
+npm i
+```
+
+Start the app
 
 ```shell
 npm start
 ```
 
-### Run nodemon
+Run nodemon
 
 ```shell
 npm run dev
